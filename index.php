@@ -8,40 +8,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <title>Document</title>
 
 </head>
 <body>
 
-    
-    <?php foreach ($hotels as $hotel): ?>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Parking</th>
+                <th scope="col">Vote</th>
+                <th scope="col">Center Distance</th>
+            </tr>
+        </thead>
 
-        <div>
-            <?= $hotel['name'] ?>
-        </div>
+        <tbody>
+            <?php foreach ($hotels as $hotel): ?>
 
-        <div>
-            <?= $hotel['description'] ?>
-        </div>
-
-        <div>
-            <?= $hotel['parking'] ?>
-        </div>
-
-        <div>
-            <?= $hotel['vote'] ?>
-        </div>
-        
-        <div>
-            <?= $hotel['distance_to_center'] ?>
-        </div>
-
-
-    <?php endforeach ?>    
+                <tr>
+                    <td><?= $hotel['name'] ?></td>
+                    <td><?= $hotel['description'] ?></td>
+                    <td><?= $hotel['parking'] ?></td>
+                    <td><?= $hotel['vote'] ?></td>
+                    <td><?= $hotel['distance_to_center'] ?></td>
+                </tr>
 
 
+            <?php endforeach ?>
+
+        </tbody>
+    </table>
 
 
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
