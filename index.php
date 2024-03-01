@@ -32,7 +32,20 @@
                 <tr>
                     <td><?= $hotel['name'] ?></td>
                     <td><?= $hotel['description'] ?></td>
+                    
+                    <?php if($hotel['parking'] == true) : ?>
+
+                        <?php $hotel['parking'] = 'presente' ?>
+
+                    <?php elseif ($hotel['parking'] == false) : ?>
+                    
+                        <?php $hotel['parking'] = 'non presente' ?>
+
+                    <?php endif; ?>
+
                     <td><?= $hotel['parking'] ?></td>
+
+
                     <td><?= $hotel['vote'] ?></td>
                     <td><?= $hotel['distance_to_center'] ?></td>
                 </tr>
