@@ -13,7 +13,31 @@
 </head>
 <body>
 
+    
+    <?php foreach ($hotels as $hotel): ?>
 
+        <div>
+            <?= $hotel['name'] ?>
+        </div>
+
+        <div>
+            <?= $hotel['description'] ?>
+        </div>
+
+        <div>
+            <?= $hotel['parking'] ?>
+        </div>
+
+        <div>
+            <?= $hotel['vote'] ?>
+        </div>
+        
+        <div>
+            <?= $hotel['distance_to_center'] ?>
+        </div>
+
+
+    <?php endforeach ?>    
 
 
 
