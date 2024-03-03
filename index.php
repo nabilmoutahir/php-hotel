@@ -40,7 +40,7 @@ include __DIR__ . "/./config/init.php";
 
                     <span>Vote</span>
 
-                    <input class="form-control" type="number" min="0" max="5">
+                    <input class="form-control" type="number" min="0" max="5" name="vote-filter">
 
                 </div>
 
