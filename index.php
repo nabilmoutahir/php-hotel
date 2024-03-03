@@ -23,11 +23,13 @@ include __DIR__ . "/./config/init.php";
         <div class="col-6">
 
 
-            <form action="./config/init.php" method="GET"
+            <form method="GET"
                 class="d-flex align-items-center justify-content-between p-3 mb-5 border border-1 rounded">
 
                 <div>
-                    <input class="form-check-input" type="checkbox" name="parking-check" id="parking-check" checked>
+                    <input class="form-check-input" type="checkbox" name="parking-checker" id="parking-checker" 
+                        <?php echo $parking_check ? 'checked' : '' ?>
+                    >
 
                     <label class="form-check-label" for="flexCheckChecked">
                         Parking
@@ -38,7 +40,7 @@ include __DIR__ . "/./config/init.php";
 
                     <span>Vote</span>
 
-                    <input class="form-control" type="number" min="0" max="5" name="parking-check" id="parking-check" checked>
+                    <input class="form-control" type="number" min="0" max="5">
 
                 </div>
 

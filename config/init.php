@@ -2,4 +2,10 @@
 
 include __DIR__ . "/../data/hotels.php";
 
-$parking = isset($_GET['parking-check']);
+$parking_check = isset($_GET['parking-checker']) ? true : false;
+
+if ($parking_check){
+
+    $hotels = array_filter($hotels, fn($hotel) => $hotel['parking']);
+
+};
